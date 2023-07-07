@@ -1,9 +1,10 @@
 import React from 'react'
+import Login from './auth/Login'
 
 const index = () => {
   return (
     <div>
-      <h2>Podcast app initialized</h2>
+      <Login />
     </div>
   )
 }
