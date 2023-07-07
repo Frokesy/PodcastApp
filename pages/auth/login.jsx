@@ -5,9 +5,9 @@ import SocialAuth from '../../components/layouts/SocialAuth'
 
 const Login = () => {
   return (
-      <div className="flex justify-center items-center min-h-screen w-[100%]">
-        <Meta title="Login || TBC" />
-        <div className="bg-[#000] p-6 rounded-lg shadow-2xl min-w-[30vw] max-w-[35vw]">
+    <div className="flex lg:justify-center items-center lg:min-h-screen w-[100%]">
+    <Meta title="Login || TBC" />
+        <div className="lg:bg-[#000] lg:p-6 lg:mt-auto mt-[6vh] rounded-lg mx-auto shadow-2xl lg:min-w-[30vw] lg:max-w-[35vw] max-w-[90vw]">
         <h2 className="text-[24px] font-bold font-mono pt-4">Welcome back{"🤓"},</h2>
             <form className="flex flex-col">
                 <InputField
