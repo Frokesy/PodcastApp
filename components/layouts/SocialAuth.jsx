@@ -1,12 +1,16 @@
 import React from 'react'
 import { FaGoogle, FaApple } from "react-icons/fa";
 
-const SocialAuth = ({ icon }) => {
+const SocialAuth = ({ icon, active }) => {
     if (icon === 'Google') {
         return (
             <div className="flex border border-[#ccc] py-2 space-x-4 justify-center items-center mb-6 rounded-full">
                 <FaGoogle size={18} />
-                <span className="text-[15px] font-semibold">Sign in with Google</span>
+                {active === "Login" ? (
+                    <span className="text-[15px] cursor-pointer font-semibold">Sign in with Google</span>
+                ) : (
+                    <span className="text-[15px] cursor-pointer font-semibold">Sign up with Google</span>
+                )}
             </div>
         )
     }
@@ -15,7 +19,11 @@ const SocialAuth = ({ icon }) => {
         return (
             <div className="flex border border-[#ccc] py-2 space-x-4 justify-center items-center mb-6 rounded-full">
                 <FaApple size={18} />
-                <span className="text-[15px] font-semibold">Sign in with Apple</span>
+                {active === "Login" ? (
+                    <span className="text-[15px] cursor-pointer font-semibold">Sign in with Apple</span>
+                ) : (
+                    <span className="text-[15px] cursor-pointer font-semibold">Sign up with Apple</span>
+                )}            
             </div>
         )
     }
@@ -23,7 +31,11 @@ const SocialAuth = ({ icon }) => {
     if (icon === 'Phone') {
         return (
             <div className="flex border border-[#ccc] py-2 space-x-4 justify-center items-center mb-6 rounded-full">
-                <span className="text-[15px] font-semibold">Continue with phone number</span>
+                {active === "Login" ? (
+                    <span className="text-[15px] cursor-pointer font-semibold">Sign in with Phone number</span>
+                ) : (
+                    <span className="text-[15px] cursor-pointer font-semibold">Continue with Phone number</span>
+                )}
             </div>
         )
     }
